@@ -1,11 +1,9 @@
 'use strict';
 
-const { Application } = require('egg');
+const egg = require('egg');
 
-const app = new Application({
-    mode: 'single',
-});
-
-app.listen(7001, '127.0.0.1', () => {
-    console.log('server start on http://127.0.0.1:7001');
+const workers = Number(process.argv[2] || require('os').cpus().length);
+egg.startCluster({
+    workers,
+    baseDir: __dirname,
 });
