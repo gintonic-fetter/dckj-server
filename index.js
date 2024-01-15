@@ -6,6 +6,6 @@ const app = new Application({
     mode: 'single',
 });
 
-app.listen(80, '127.0.0.1', () => {
+app.listen(7001, '127.0.0.1', () => {
     console.log('server start on http://127.0.0.1:7001');
 });
