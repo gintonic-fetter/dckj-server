@@ -1,8 +1,16 @@
+
 {
-    "git": {
-      "deploymentEnabled": false
-    },
-    "github": {
-      "silent": true
-     } 
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@now/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      }
+    ]
 }
